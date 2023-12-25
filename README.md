@@ -13,4 +13,4 @@ To start the server, from the root directory, run:
 dotnet watch
 ```
 
-I am using [Mock Spotify REST API] (https://spotify-demo-api-fe224840a08c.herokuapp.com/v1/docs/) for an external data source.
+I am using [Mock Spotify REST API](https://spotify-demo-api-fe224840a08c.herokuapp.com/v1/docs/) for an external data source.

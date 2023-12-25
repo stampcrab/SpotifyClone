@@ -13,6 +13,7 @@ namespace SpotifyClone
             builder.Services
                 .AddGraphQLServer()
                 .AddQueryType<Query>()
+                .AddMutationType<Mutation>()
                 .RegisterService<SpotifyService>();
             builder.Services.AddCors(options =>
             {

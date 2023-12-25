@@ -3,13 +3,14 @@ namespace SpotifyClone.types
 {
     public class Playlist
     {
-        private Services.Playlist item;
 
         public Playlist(Services.Playlist item)
         {
             Id = item.Id;
             Name = item.Name;
             Description = item.Description;
+            var tracks = item.Tracks.Items.Select((trackItem) => new Track(trackItem.track));
+            Tracks = tracks.ToList();
         }
 
         public Playlist(string id, string name)
@@ -27,5 +28,7 @@ namespace SpotifyClone.types
             "The playlist description. _Only returned for modified, verified playlists, otherwise null_."
             )]
         public string? Description { get; set; }
+        [GraphQLDescription("The playlist's tracks.")]
+        public List<Track> Tracks { get; set; }
     }
 }
